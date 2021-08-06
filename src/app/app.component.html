@@ -1,5 +1,6 @@
-<div ngbPopover="This is a popover content">
-  Hover for popover
-</div>
+<ng-template #popoverContent>
+  <div style="width: 200px; width: 200px;">This is a popover window content</div>
+</ng-template>
 
-<button ngbPopover="This is a popover content">Click me!</button>
+
+<button [ngbPopover]="popoverContent" #myPopover="ngbPopover" placement="right">Click me!</button>
